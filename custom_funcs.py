@@ -5,6 +5,7 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 import scipy.stats as stats
 import pylab
+from config import data_path
 
 from sklearn import preprocessing
 
@@ -121,10 +122,13 @@ def normality(df, feature):#original, log, reciprocal, square root, exponential,
 
 
 #--------------------------feature engineering funcitons-------------------------- 
-def split(df, ratio):
-  X_train, X_test,  = train_test_split(df, test_size = ratio, random_state = 41)
-  X_train.reset_index(inplace = True,drop=True)
-  X_test.reset_index(inplace = True,drop=True)
+def split(ratio):
+  df = pd.read_csv(data_path)
+  X_train, X_test  = train_test_split(df, test_size = ratio, random_state = 41)
+  X_train.reset_index(inplace = True, drop=True)
+  X_test.reset_index(inplace = True, drop=True)
+
+  return df,X_train, X_test
 
 def subtract_nan(row):
   if np.isnan(row['LEAVES USED']):
