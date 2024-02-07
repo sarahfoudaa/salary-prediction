@@ -1,3 +1,4 @@
+#where you originally get the dataset (sklearn datasets, keras datasets, kaggle....)
 from pathlib import Path
 
 data_dir = '/content/drive/MyDrive/machine_learning_projects/salary_prediction/'
