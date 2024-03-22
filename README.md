@@ -11,6 +11,7 @@
 * [Feature-selection](#Feature-selection)
 * [Pre-processing](#Pre-processing)
 * [Model](#Model)
+* [Resultls](#Results)
 
 # Requirments
 * lazypredict == 0.2.12
@@ -140,3 +141,11 @@ before vs after
 
 
 # Feature-selection
+
+# Model
+
+# Results
+* MAE: 0.06749809805980801
+* MSE: 0.006655037272039222
+* RMSE: 0.08157841180140259
+* R2 Square 0.9478234217946953
